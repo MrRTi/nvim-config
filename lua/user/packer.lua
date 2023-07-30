@@ -49,6 +49,10 @@ return require('packer').startup(function(use)
         -- refer to the configuration section below
       }
     end
+  }),
+  use({
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   })
 })
 end)
