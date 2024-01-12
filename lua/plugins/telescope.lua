@@ -26,15 +26,15 @@ return {
       -- See `:help telescope.builtin`
       { '<leader>?', require('telescope.builtin').oldfiles, desc = '[?] Find recently opened files' },
       { '<leader><space>', require('telescope.builtin').buffers, desc = '[ ] Find existing buffers' },
-      { 
-        '<leader>/', 
+      {
+        '<leader>/',
         function()
           -- You can pass additional configuration to telescope to change theme, layout, etc.
           require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
             winblend = 10,
             previewer = false,
           })
-        end, 
+        end,
         desc = '[/] Fuzzily search in current buffer'
       },
 
@@ -48,7 +48,7 @@ return {
     },
     opts = function()
       -- See `:help telescope` and `:help telescope.setup()`
-      return { 
+      return {
         defaults = {
           mappings = {
             i = {
@@ -71,8 +71,23 @@ return {
             },
           },
         }
-      }   
+      }
     end,
   },
+  {
+    'nvim-telescope/telescope-ui-select.nvim',
+    config = function()
+      require("telescope").setup {
+        extensions = {
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+            }
+          }
+        }
+      }
+
+      require("telescope").load_extension("ui-select")
+    end,
+  }
 }
 
