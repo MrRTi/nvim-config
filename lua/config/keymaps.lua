@@ -19,6 +19,21 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "[K] Move highlighted text
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- Add new lines without insert mode
+vim.keymap.set(
+	"n",
+	"<leader>o",
+	':<C-u>call append(line("."),   repeat([""], v:count1))<CR>',
+	{ desc = "Add new line below" }
+)
+
+vim.keymap.set(
+	"n",
+	"<leader>O",
+	':<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>',
+	{ desc = "Add new line above" }
+)
+
 -- Keep cursor in the middle while search
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
