@@ -4,15 +4,7 @@ return {
 		"nvim-lualine/lualine.nvim",
 		-- See `:help lualine.txt`
 		dependencies = {
-			'folke/noice.nvim',
-		},
-		opts = {
-			options = {
-				icons_enabled = false,
-				--[[ theme = 'onedark', ]]
-				component_separators = "|",
-				section_separators = "",
-			},
+			"folke/noice.nvim",
 		},
 		config = function()
 			require("lualine").setup({
@@ -24,6 +16,12 @@ return {
 							color = { fg = "#ff9e64" },
 						},
 					},
+				},
+				options = {
+					icons_enabled = false,
+					--[[ theme = 'onedark', ]]
+					component_separators = "|",
+					section_separators = "",
 				},
 			})
 		end,
