@@ -5,6 +5,14 @@ return {
 			"MunifTanjim/nui.nvim",
 			"nvim-lua/plenary.nvim",
 		},
-		opts = {},
+		opts = {
+			restriction_mode = "hint",
+			disabled_keys = {
+				-- ["<Up>"] = { "", "i" },
+				-- ["<Down>"] = { "", "i" },
+				-- ["<Left>"] = { "", "i" },
+				-- ["<Right>"] = { "", "i" },
+			},
+		},
 	},
 }
