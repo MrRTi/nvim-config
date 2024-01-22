@@ -15,9 +15,13 @@ vim.keymap.set("n", "<leader>pf", vim.cmd.Ex, { desc = "[p]roject [f]iles" })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "[J] Move highlighted text up" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "[K] Move highlighted text down" })
 
--- Keep cursor in the middle hwne half-page jump
+-- Keep cursor in the middle when half-page jump
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+vim.keymap.set("n", "j", "jzz")
+vim.keymap.set("n", "k", "kzz")
+vim.keymap.set("n", "G", "Gzz")
 
 -- Add new lines without insert mode
 vim.keymap.set(
