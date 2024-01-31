@@ -67,4 +67,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.opt.cursorline = true
+
 vim.opt.winbar = "%=%m %f"
+vim.opt.so = 999
+
