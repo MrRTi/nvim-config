@@ -18,6 +18,13 @@ return {
           require("gitsigns").preview_hunk,
           { buffer = bufnr, desc = "[g]it [h]unk [p]review" }
         )
+        vim.keymap.set(
+          "n",
+          "<leader>gb",
+          require("gitsigns").toggle_current_line_blame,
+          { buffer = bufnr, desc = "[g]it [b]lame" }
+        )
+
 
         -- don't override the built-in and fugitive keymaps
         local gs = package.loaded.gitsigns
