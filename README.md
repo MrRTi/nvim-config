@@ -1,3 +1,5 @@
 # Nvim configuration
 
-Moved to [dotfiles repository](https://github.com/MrRTi/dotfiles)
+Personal neovim configuration.
+
+Place at `~/.config/nvim`
