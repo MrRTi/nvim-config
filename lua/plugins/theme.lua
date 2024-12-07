@@ -1,15 +1,18 @@
 return {
 	{
-		"Tsuzat/NeoSolarized.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
 		config = function()
-			vim.cmd([[ colorscheme NeoSolarized ]])
-			require("lualine").setup({
-				options = {
-					theme = "NeoSolarized",
-				},
+			require("tokyonight").setup({
+				style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+				light_style = "day", -- The theme is used when the background is set to light
+				transparent = true,
+				day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+				dim_inactive = false, -- dims inactive windows
+				lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 			})
+			vim.cmd([[ colorscheme tokyonight]])
 		end,
 	},
 	{
