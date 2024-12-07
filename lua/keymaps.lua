@@ -30,7 +30,7 @@ end
 add_keymap("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
-add_keymap_with_desc("n", "<leader>q", vim.diagnostic.setloclist, "Open diagnostic [Q]uickfix list")
+add_keymap_with_desc("n", "<leader>q", vim.diagnostic.setloclist, "Open diagnostic [q]uickfix list")
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -57,9 +57,9 @@ add_keymap_with_desc("n", "<C-k>", "<C-w><C-k>", "Move focus to the upper window
 
 -- Open netrw
 add_keymap_with_desc("n", "-", vim.cmd.Ex, "Open netrw (directory)")
-add_keymap_with_desc("n", "<leader>fx", "<cmd>! chmod +x %<CR>", "make [F]ile executable")
+add_keymap_with_desc("n", "<leader>fx", "<cmd>! chmod +x %<CR>", "make [f]ile e[x]ecutable")
 -- Place current file path in clipboard
-add_keymap_with_desc("n", "<leader>fp", '<cmd>let @+ = expand("%")<CR>', "copy [F]ile [P]ath")
+add_keymap_with_desc("n", "<leader>fp", '<cmd>let @+ = expand("%")<CR>', "copy [f]ile [p]ath to clipboard")
 
 -- Keep cursor in the middle when half-page jump
 add_keymap("n", "<C-d>", "<C-d>zz")
@@ -75,14 +75,14 @@ add_keymap("n", "n", "nzzzv")
 add_keymap("n", "N", "Nzzzv")
 
 -- Paste in visual mode and keep pasted in buffer
-add_keymap_with_desc("x", "<leader>p", [["_dP]], "[P]aste in visial mode and keep pasted in buffer")
+add_keymap_with_desc("x", "<leader>p", [["_dP]], "[p]aste in visial mode and keep pasted in buffer")
 
 -- Use system clipboard
-add_keymap_with_desc({ "n", "v" }, "<leader>y", [["+y]], "[Y]ank to system clipboard")
+add_keymap_with_desc({ "n", "v" }, "<leader>y", [["+y]], "[y]ank to system clipboard")
 add_keymap_with_desc("n", "<leader>Y", [["+Y]], "[Y]ank line to system clipboard")
 
 -- Delete with void buffer
-add_keymap_with_desc({ "n", "v" }, "<leader>d", [["_d]], "[D]elete without yank")
+add_keymap_with_desc({ "n", "v" }, "<leader>d", [["_d]], "[d]elete without yank")
 
 -- Copy Ecs behaviour for C-c
 add_keymap("i", "<C-c>", "<Esc>")
@@ -109,7 +109,7 @@ add_keymap(
 	"n",
 	"<leader>tt",
 	":lua ToggleBackground()<CR>",
-	{ noremap = true, silent = true, desc = "[T]oggle [T]heme" }
+	{ noremap = true, silent = true, desc = "[t]oggle [t]heme" }
 )
 
 -- vim: ts=2 sts=2 sw=2 et

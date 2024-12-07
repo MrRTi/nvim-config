@@ -13,14 +13,14 @@ return {
 
 		vim.keymap.set("n", "<leader>ha", function()
 			harpoon:list():add()
-		end, { desc = "[H]arpoon [A]dd" })
+		end, { desc = "[h]arpoon [a]dd" })
 
 		vim.keymap.set("n", "<leader>hl", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end, { desc = "[H]arpoon [L]ist" })
+		end, { desc = "[h]arpoon [l]ist" })
 
 		require("which-key").add({
-			{ "<leader>h", group = "[H]arpoon" },
+			{ "<leader>h", group = "[h]arpoon" },
 		})
 	end,
 }
