@@ -56,7 +56,10 @@ add_keymap_with_desc("n", "<C-j>", "<C-w><C-j>", "Move focus to the lower window
 add_keymap_with_desc("n", "<C-k>", "<C-w><C-k>", "Move focus to the upper window")
 
 -- Open netrw
-add_keymap_with_desc("n", "-", vim.cmd.Ex, "Open netrw (directory)")
+add_keymap_with_desc("n", "_", vim.cmd.Ex, "Open netrw (directory)")
+
+add_keymap_with_desc("n", "-", "<CMD>Oil<CR>", "Open oil")
+
 add_keymap_with_desc("n", "<leader>fx", "<cmd>! chmod +x %<CR>", "make [f]ile e[x]ecutable")
 -- Place current file path in clipboard
 add_keymap_with_desc("n", "<leader>fp", '<cmd>let @+ = expand("%")<CR>', "copy [f]ile [p]ath to clipboard")
