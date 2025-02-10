@@ -50,13 +50,14 @@ add_keymap_with_desc("t", "<Esc><Esc>", "<C-\\><C-n>", "Exit terminal mode")
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-add_keymap_with_desc("n", "<C-h>", "<C-w><C-h>", "Move focus to the left window")
-add_keymap_with_desc("n", "<C-l>", "<C-w><C-l>", "Move focus to the right window")
-add_keymap_with_desc("n", "<C-j>", "<C-w><C-j>", "Move focus to the lower window")
-add_keymap_with_desc("n", "<C-k>", "<C-w><C-k>", "Move focus to the upper window")
-
+--  Conflict with vim-tmux-navigator
+-- add_keymap_with_desc("n", "<C-h>", "<C-w><C-h>", "Move focus to the left window")
+-- add_keymap_with_desc("n", "<C-l>", "<C-w><C-l>", "Move focus to the right window")
+-- add_keymap_with_desc("n", "<C-j>", "<C-w><C-j>", "Move focus to the lower window")
+-- add_keymap_with_desc("n", "<C-k>", "<C-w><C-k>", "Move focus to the upper window")
+--
 -- Open netrw
-add_keymap_with_desc("n", "_", vim.cmd.Ex, "Open netrw (directory)")
+add_keymap_with_desc("n", "<leader>-", vim.cmd.Ex, "Open netrw (directory)")
 
 add_keymap_with_desc("n", "-", "<CMD>Oil<CR>", "Open oil")
 
