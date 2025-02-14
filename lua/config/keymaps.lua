@@ -8,4 +8,5 @@ local map = LazyVim.safe_keymap_set
 -- map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 
 map({ "n" }, "<leader>fp", '<cmd>let @+ = expand("%")<CR>', { desc = "Copy file path to clipboard" })
+map({ "n" }, "-", '<cmd>Oil<CR>', { desc = "Open Oil" })
 
